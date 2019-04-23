@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Lakmedipro</title>
+    </h:head>
+    <h:body>
+
+
+
+        <h:form >
+
+            BMI Calculator
+
+
+            <table >
+
+                <tr>
+                    <td>
+                        Height
+                    </td>
+                    <td>
+                        <h:inputText value="#{clientController.height}" ></h:inputText>
+                    </td>
+                    <td>
+                        m
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Weight
+                    </td>
+                    <td>
+                        <h:inputText value="#{clientController.weight}" ></h:inputText>
+                    </td>
+                    <td>
+                        kg
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+
+                        <h:commandButton value="Calculate BMI" action="#{clientController.calculateBmi()}" ></h:commandButton>
+
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+                    <td>
+                        BMI
+                    </td>
+                    <td>
+                        <h:inputText value="#{clientController.bmi}" ></h:inputText>
+                    </td>
+                    <td>
+                        kg
+                    </td>
+                </tr>
+
+
+            </table>
+
+            
+            
+            
+            <p>
+                #{clientController.clientName}
+            </p>
+
+            <p>
+                #{clientController.clientNumber}
+            </p>
+            <h:commandButton value="Increase Client Number" action="#{clientController.increaseClientNumber()}" ></h:commandButton>
+
+        </h:form>
+
+
+    </h:body>
+</html>
+
